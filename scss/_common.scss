@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: "MuseoSansCyrl";
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0 0 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.widget-scroll-top {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 9999;
+  background-color: #ffd201;
+  border-radius: 10px;
+  color: white;
+  font-size: 30px;
+  text-align: center;
+  padding-top: 9px;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s linear;
+  cursor: pointer;
+
+  &.is-visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+//BURGER BUTTON//
+.burger-button {
+  display: none;
+
+  @include media("<=tablet") {
+    display: block;
+    position: fixed;
+    top: 60px;
+    right: 20px;
+    z-index: 200;
+  }
+
+  @include media("<=tablet") {
+    &.active {
+      position: fixed;
+      top: 60px;
+      right: 20px;
+      z-index: 200;
+    }
+  }
+
+  .line {
+    height: 6px;
+    width: 40px;
+    margin-bottom: 7px;
+    background: white;
+    transition: all 200ms ease-in-out;
+    opacity: 1;
+    border: 1px #ff7c2e solid;
+  }
+
+  &.active {
+    .line {
+      &.one {
+        transform: rotate(45deg) scale(1.2);
+      }
+      &.two {
+        transform: rotate(-45deg) scale(1.2) translateY(-7px) translateX(7px);
+      }
+      &.three {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+/* Progress bar */
+.progress-container {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
