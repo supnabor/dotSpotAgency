@@ -1,0 +1,35 @@
+.hero {
+  background-image: url(/images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 820px;
+  position: relative;
+  .container {
+    position: relative;
+    img {
+      position: absolute;
+      left: -25%;
+      top: 207px;
+    }
+    .hero-text {
+      position: absolute;
+      padding-left: 67px;
+      padding-top: 300px;
+    }
+  }
+}
+
+.hero-title {
+  font-family: "Roboto";
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #e911a0;
+}
+
+.hero-subtitle {
+  font-family: "Roboto";
+  font-size: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+}

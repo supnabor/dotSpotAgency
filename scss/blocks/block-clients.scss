@@ -1,0 +1,43 @@
+.clients-inner {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  padding: 15px 67px 150px 67px;
+}
+
+.clients-button {
+  position: absolute;
+}
+
+.clients-item {
+  width: 360px;
+  height: 451px;
+  border: 13px solid #000000;
+}
+
+.clients-title {
+  background-image: url(/images/clients-title.png);
+  background-repeat: no-repeat;
+  color: #fff;
+  align-items: center;
+  text-align: center;
+  padding: 15px 0 29px;
+}
+
+.clients-name {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.clients-position {
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.clients-text {
+  font-size: 17px;
+  font-weight: 400;
+  font-style: italic;
+  padding: 26px 54px 0 54px;
+}

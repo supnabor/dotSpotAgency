@@ -1,14 +1,4 @@
 @font-face {
-  font-family: "Mont-Black";
-  src: url("../fonts/Mont ExtraLight DEMO.eot");
-  src: local("☺"), url("../fonts/Mont ExtraLight DEMO.woff") format("woff"),
-    url("../fonts/Mont ExtraLight DEMO.ttf") format("truetype"),
-    url("../fonts/Mont ExtraLight DEMO.svg") format("svg");
-  font-weight: 900;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Black.eot");
   src: local("☺"), url("../fonts/Roboto-Black.woff") format("woff"),
@@ -34,6 +24,16 @@
   src: local("☺"), url("../fonts/Roboto-Regular.woff") format("woff"),
     url("../fonts/Roboto-Regular.ttf") format("truetype"),
     url("../fonts/Roboto-Regular.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mont-Black";
+  src: url("../fonts/Mont-Black.eot");
+  src: local("☺"), url("../fonts/Mont-Black.woff") format("woff"),
+    url("../fonts/Mont-Black.ttf") format("truetype"),
+    url("../fonts/Mont-Black.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }

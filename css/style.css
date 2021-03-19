@@ -61,14 +61,3 @@ p {
   font-weight: normal;
   font-style: normal;
 }
-
-/*CONTAINER*/
-.container {
-  width: 100%;
-  max-width: 1277px;
-  margin: 0 auto;
-}
-
-.header-nav {
-  background-color: black;
-}

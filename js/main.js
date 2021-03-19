@@ -75,23 +75,7 @@ function initHamburger() {
     $navItems.click(toggleActiveClass);
 }
 
-// Scroll Top Button
-function initScrollTopButton() {
-    const widgetScrollTop = document.querySelector('.widget-scroll-top');
 
-    widgetScrollTop.addEventListener('click', function(event) {
-        event.preventDefault();
-        $("html, body").animate({ scrollTop: 0}, 300);
-    });
-
-    document.addEventListener('scroll', function() {
-        if (window.pageYOffset > 1250) {
-            $(widgetScrollTop).addClass('is-visible');
-        } else {
-            $(widgetScrollTop).removeClass('is-visible');
-        }
-    });
-}
 
 // Check if element entered viewport
 function isInViewport(el) {

@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "MuseoSansCyrl";
+  font-family: "Roboto";
 }
 
 *,
@@ -22,12 +22,14 @@ p {
   margin: 0 0 10px;
 }
 
+/*CONTAINER*/
 .container {
   width: 100%;
-  max-width: 1160px;
+  max-width: 1276px;
   margin: 0 auto;
 }
 
+/*SCROLL TOP*/
 .widget-scroll-top {
   position: fixed;
   left: 20px;
