@@ -24,8 +24,8 @@
 }
 
 .services-item {
+  border: 13px solid #000000;
   &__1 {
-    border: 13px solid #000000;
     background-color: #fff;
     width: 30%;
     margin-left: 62px;
@@ -46,12 +46,10 @@
     }
   }
   &__2 {
-    border: 13px solid #000000;
     background-color: #ffc600;
     width: 30%;
   }
   &__3 {
-    border: 13px solid #000000;
     background-color: #3c00ff;
     color: #fff;
     width: 35%;
@@ -74,12 +72,10 @@
     }
   }
   &__4 {
-    border: 13px solid #000000;
     background-color: #00ccff;
     width: 35%;
   }
   &__5 {
-    border: 13px solid #000000;
     background-color: #e911a0;
     width: 30%;
     height: 402px;
@@ -94,7 +90,6 @@
   }
   &__6 {
     width: 30%;
-    border: 13px solid #000000;
     position: relative;
     border-left: none;
     border-top: none;

@@ -2,42 +2,88 @@
   display: flex;
   justify-content: space-around;
   position: relative;
-  padding: 15px 67px 150px 67px;
+  padding: 15px 67px 0px;
+  margin-bottom: 150px;
 }
 
 .clients-button {
   position: absolute;
+  width: 55px;
+  height: 55px;
+  background-color: black;
+  padding: 13px;
+  border: 0;
+  cursor: pointer;
+  &__left {
+    top: 60px;
+    left: 0;
+  }
+  &__right {
+    bottom: 60px;
+    right: 0;
+  }
+}
+
+.button-triangle {
+  border: 0 solid transparent;
+  border-left-width: 15px;
+  border-right-width: 15px;
+  border-top: 15px solid #fff;
 }
 
 .clients-item {
-  width: 360px;
-  height: 451px;
+  width: 100%;
+  max-width: 360px;
+  min-height: 451px;
   border: 13px solid #000000;
+  &__white {
+    background-color: #fff;
+  }
+  &__blue {
+    background-color: #00ccff;
+  }
+  &__yellow {
+    background-color: #ffc600;
+  }
 }
 
 .clients-title {
-  background-image: url(/images/clients-title.png);
-  background-repeat: no-repeat;
+  //background-image: url(/images/clients-title.png);
+  //background-repeat: no-repeat;
+  position: relative;
+  border: 0 solid transparent;
+  border-left-width: 60px;
+  border-right-width: 60px;
+  border-top: 85px solid #000;
   color: #fff;
-  align-items: center;
   text-align: center;
-  padding: 15px 0 29px;
 }
 
 .clients-name {
-  font-size: 17px;
+  position: absolute;
+  font-size: 20px;
   font-weight: 700;
   line-height: 24px;
+  top: -75px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
 }
 
 .clients-position {
+  position: absolute;
   font-size: 17px;
   line-height: 24px;
+  top: -45px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
 }
 
 .clients-text {
   font-size: 17px;
   font-weight: 400;
   font-style: italic;
-  padding: 26px 54px 0 54px;
+  line-height: 25px;
+  padding: 26px 54px 10px 54px;
 }

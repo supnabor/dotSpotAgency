@@ -1,0 +1,16 @@
+.partners {
+  background-color: #00ccff;
+}
+
+.partners-inner {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 150px;
+}
+
+.partners-item img {
+  filter: grayscale(100%);
+  &:hover {
+    filter: grayscale(0);
+  }
+}

@@ -6,7 +6,7 @@
 
 .section-title__purple {
   padding: 149px 0 0 67px;
-  margin-bottom: 65px;
+  margin-bottom: 80px;
   color: #fff;
   font-size: 69px;
   font-weight: 900;
@@ -29,10 +29,17 @@
   padding: 0 67px 115px 67px;
 }
 
+.about-image {
+  margin-top: -16px;
+  img {
+    width: 100%;
+  }
+}
+
 .about-text {
-  margin-top: 16px;
-  width: 572px;
-  height: 455px;
+  width: 100%;
+  max-width: 572px;
+  min-height: 455px;
   border: 13px solid #000000;
   background-color: #ffffff;
   text-align: left;
@@ -40,7 +47,7 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 34.79px;
-  padding: 64px 84px 0 73px;
+  padding: 64px 84px 20px 73px;
   span {
     font-weight: 700;
   }
