@@ -24,7 +24,7 @@
       top: 0;
       bottom: 0;
       right: 0;
-      background: #66b5ff;
+      background: #fff;
       z-index: 10;
 
       display: flex;
@@ -33,9 +33,11 @@
       justify-content: center;
       align-content: space-between;
       align-items: center;
+      opacity: 0.9;
 
       .header-link {
         padding: 20px;
+        margin-left: 0;
       }
     }
   }

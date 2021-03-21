@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/styles.min.css" />
     <title>DotSpotAgency</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="./js/app.min.js"></script>
   </head>
   <body>
     <!--HEADER-->
@@ -30,12 +37,46 @@
         </div>
       </div>
     </header>
-
+    <!-- 9441FA25C65B1B4387049F2F48B9C763 -->
     <!--HERO-->
     <div class="hero">
+      <div
+        id="animation_container"
+        style="
+          background-color: rgba(255, 255, 255, 1);
+          width: 100%;
+          height: 613px;
+          position: absolute;
+          top: 0;
+          left: 0;
+        "
+      >
+        <canvas
+          id="canvas-bg"
+          width="1920"
+          height="1080"
+          style="
+            position: absolute;
+            display: block;
+            background-color: rgba(255, 255, 255, 1);
+          "
+        ></canvas>
+        <div
+          id="dom_overlay_container"
+          style="
+            pointer-events: none;
+            overflow: hidden;
+            width: 1920px;
+            height: 1080px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            display: block;
+          "
+        ></div>
+      </div>
       <div class="container">
         <img src="/images/hero-img.png" alt="hero-img" />
-
         <div class="hero-text">
           <h1 class="hero-title">
             Marketing<br />
@@ -50,7 +91,7 @@
     </div>
 
     <!--ABOUT-->
-    <div class="about">
+    <div class="about" id="one">
       <div class="container">
         <div class="section-title__purple">About us</div>
         <div class="about-inner">
@@ -69,7 +110,7 @@
     </div>
 
     <!--SERVICES-->
-    <div class="services">
+    <div class="services" id="two">
       <div class="container">
         <div class="section-title">services</div>
         <div class="services-inner">
@@ -139,7 +180,7 @@
     </div>
 
     <!--CLIENTS-->
-    <div class="clients">
+    <div class="clients" id="three">
       <div class="container">
         <div class="section-title">clients</div>
         <div class="clients-inner">
@@ -191,7 +232,7 @@
     </div>
 
     <!--OUR PARTNERS-->
-    <div class="partners">
+    <div class="partners" id="four">
       <div class="container">
         <div class="section-title">our partners</div>
         <div class="partners-inner">

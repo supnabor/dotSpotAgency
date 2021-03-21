@@ -61,28 +61,27 @@ p {
   @include media("<=tablet") {
     display: block;
     position: fixed;
-    top: 60px;
-    right: 20px;
+    top: 45px;
+    right: 40px;
     z-index: 200;
   }
 
   @include media("<=tablet") {
     &.active {
       position: fixed;
-      top: 60px;
-      right: 20px;
+      top: 45px;
+      right: 40px;
       z-index: 200;
     }
   }
 
   .line {
-    height: 6px;
-    width: 40px;
-    margin-bottom: 7px;
-    background: white;
+    height: 10px;
+    width: 56px;
+    margin-bottom: 8px;
+    background: #000;
     transition: all 200ms ease-in-out;
     opacity: 1;
-    border: 1px #ff7c2e solid;
   }
 
   &.active {
@@ -91,7 +90,7 @@ p {
         transform: rotate(45deg) scale(1.2);
       }
       &.two {
-        transform: rotate(-45deg) scale(1.2) translateY(-7px) translateX(7px);
+        transform: rotate(-45deg) scale(1.2) translateY(-10px) translateX(10px);
       }
       &.three {
         opacity: 0;
@@ -107,4 +106,9 @@ p {
   top: 0;
   z-index: 1;
   width: 100%;
+}
+
+/* Hero */
+.hero {
+  overflow: hidden;
 }
