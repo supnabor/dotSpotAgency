@@ -29,31 +29,6 @@ p {
   margin: 0 auto;
 }
 
-/*SCROLL TOP*/
-.widget-scroll-top {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
-  z-index: 9999;
-  background-color: #ffd201;
-  border-radius: 10px;
-  color: white;
-  font-size: 30px;
-  text-align: center;
-  padding-top: 9px;
-  width: 50px;
-  height: 50px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.15s linear;
-  cursor: pointer;
-
-  &.is-visible {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
 //BURGER BUTTON//
 .burger-button {
   display: none;
@@ -66,12 +41,23 @@ p {
     z-index: 200;
   }
 
+  @include media("<=736px") {
+    top: 25px;
+    right: 20px;
+  }
+
   @include media("<=tablet") {
     &.active {
       position: fixed;
       top: 45px;
       right: 40px;
       z-index: 200;
+    }
+    @include media("<=736px") {
+      &.active {
+        top: 25px;
+        right: 20px;
+      }
     }
   }
 
@@ -82,6 +68,12 @@ p {
     background: #000;
     transition: all 200ms ease-in-out;
     opacity: 1;
+
+    @include media("<=736px") {
+      height: 8px;
+      width: 48px;
+      margin-bottom: 6px;
+    }
   }
 
   &.active {
@@ -91,6 +83,9 @@ p {
       }
       &.two {
         transform: rotate(-45deg) scale(1.2) translateY(-10px) translateX(10px);
+        @include media("<=736px") {
+          transform: rotate(-45deg) scale(1.2) translateY(-8px) translateX(8px);
+        }
       }
       &.three {
         opacity: 0;

@@ -4,18 +4,73 @@
   background-size: cover;
   height: 820px;
   position: relative;
+  @include media("<=desktop") {
+    height: 700px;
+  }
+  @include media("<=tablet") {
+    height: 600px;
+  }
+  @include media("<=736px") {
+    height: 400px;
+  }
+  @include media("<=414px") {
+    height: 550px;
+  }
+
   .container {
     position: relative;
     img {
       position: absolute;
       left: -25%;
       top: 207px;
+      @include media("<=desktop") {
+        height: 500px;
+        left: -18%;
+      }
+      @include media("<=tablet") {
+        height: 400px;
+        left: -27%;
+        top: 200px;
+      }
+      @include media("<=736px") {
+        height: 300px;
+        left: -15%;
+        top: 100px;
+      }
+      @include media("<=414px") {
+        height: 400px;
+        left: -75%;
+        top: 150px;
+      }
+      @include media("<=375px") {
+        left: -380px;
+      }
     }
-    .hero-text {
-      position: absolute;
-      padding-left: 67px;
-      padding-top: 300px;
-    }
+  }
+}
+
+.hero-text {
+  position: absolute;
+  padding-left: 67px;
+  padding-top: 300px;
+  @include media("<=desktop") {
+    padding-top: 270px;
+  }
+  @include media("<=tablet") {
+    padding-left: 45px;
+    padding-top: 250px;
+  }
+  @include media("<=736px") {
+    padding-left: 20px;
+    padding-top: 140px;
+  }
+  @include media("<=414px") {
+    padding-top: 200px;
+    width: 330px;
+  }
+  @include media("<=375px") {
+    padding-top: 190px;
+    width: 320px;
   }
 }
 
@@ -25,6 +80,15 @@
   font-weight: 900;
   text-transform: uppercase;
   color: #e911a0;
+  @include media("<=tablet") {
+    font-size: 36px;
+  }
+  @include media("<=736px") {
+    font-size: 30px;
+  }
+  @include media("<=414px") {
+    font-size: 32px;
+  }
 }
 
 .hero-subtitle {
@@ -32,4 +96,13 @@
   font-size: 50px;
   font-weight: 900;
   text-transform: uppercase;
+  @include media("<=tablet") {
+    font-size: 36px;
+  }
+  @include media("<=736px") {
+    font-size: 30px;
+  }
+  @include media("<=414px") {
+    font-size: 32px;
+  }
 }

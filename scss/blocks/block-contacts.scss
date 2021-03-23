@@ -7,6 +7,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 190px 80px;
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(/images/contacts-dots.png);
+    width: 100%;
+    max-width: 414px;
+    height: 100%;
+    max-height: 164px;
+    background-repeat: no-repeat;
+    top: 40%;
+    left: 27%;
+  }
 }
 
 .contacts-box {
@@ -16,6 +30,7 @@
   border: 13px solid black;
   position: relative;
   padding: 50px 0 22px 100px;
+  z-index: 10;
 }
 
 .contacts-info {

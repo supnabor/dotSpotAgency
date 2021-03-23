@@ -48,8 +48,6 @@
 }
 
 .clients-title {
-  //background-image: url(/images/clients-title.png);
-  //background-repeat: no-repeat;
   position: relative;
   border: 0 solid transparent;
   border-left-width: 60px;
@@ -86,4 +84,8 @@
   font-style: italic;
   line-height: 25px;
   padding: 26px 54px 10px 54px;
+  span {
+    font-family: "Mont-Black";
+    font-size: 29px;
+  }
 }

@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  @include media("<=414px") {
+    display: block;
+    padding: 0 15px;
+  }
 }
 
 .section-title {
@@ -20,19 +24,54 @@
     border-radius: 50%;
     margin-left: 15px;
     margin-bottom: 12px;
+    @include media(">414px", "<=tablet") {
+      margin-bottom: 2px;
+      margin-left: 10px;
+    }
+    @include media("<=414px") {
+      width: 20px;
+      height: 20px;
+      margin-left: 5px;
+      margin-bottom: 2px;
+    }
+  }
+  @include media("<=desktop") {
+    padding: 80px 0 0 47px;
+    margin-bottom: 60px;
+  }
+  @include media(">414px", "<=tablet") {
+    padding: 60px 0 0 47px;
+    font-size: 46px;
+    margin-bottom: 40px;
+  }
+  @include media("<=414px") {
+    font-size: 38px;
+    padding: 40px 0 30px 30px;
+    margin-bottom: 30px;
   }
 }
 
 .services-item {
   border: 13px solid #000000;
+  width: 30%;
+  flex: 1 1 auto;
+  @include media("<=414px") {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
   &__1 {
     background-color: #fff;
-    width: 30%;
+    max-width: 383px;
     margin-left: 62px;
     margin-top: 119px;
     border-right: none;
     border-bottom: none;
     position: relative;
+    @include media("<=414px") {
+      margin: 0 auto;
+      border: 13px solid #000000;
+    }
     &::before {
       content: "";
       display: inline-block;
@@ -43,19 +82,26 @@
       left: -63px;
       bottom: -12px;
       border: 13px solid #000000;
+      @include media("<=414px") {
+        display: none;
+      }
     }
   }
   &__2 {
     background-color: #ffc600;
-    width: 30%;
+    max-width: 383px;
   }
   &__3 {
     background-color: #3c00ff;
     color: #fff;
-    width: 35%;
+    max-width: 440px;
     margin-top: 70px;
     border-left: none;
     position: relative;
+    @include media("<=414px") {
+      margin: 0 auto;
+      border: 13px solid #000000;
+    }
     &::before {
       content: "";
       display: inline-block;
@@ -66,6 +112,9 @@
       left: -12px;
       top: -70px;
       border: 13px solid #000000;
+      @include media("<=414px") {
+        display: none;
+      }
     }
     .item-number {
       color: #fff;
@@ -73,13 +122,18 @@
   }
   &__4 {
     background-color: #00ccff;
-    width: 35%;
+    max-width: 458px;
   }
   &__5 {
     background-color: #e911a0;
-    width: 30%;
+    max-width: 370px;
     height: 402px;
     margin-top: -110px;
+    border-left: none;
+    @include media("<=414px") {
+      margin: 0 auto;
+      border: 13px solid #000000;
+    }
 
     .item-number {
       color: #fff;
@@ -89,10 +143,13 @@
     }
   }
   &__6 {
-    width: 30%;
+    max-width: 370px;
     position: relative;
     border-left: none;
     border-top: none;
+    @include media("<=414px") {
+      border: 13px solid #000000;
+    }
     &::before {
       content: "";
       display: inline-block;
@@ -103,6 +160,9 @@
       left: -192px;
       bottom: -13px;
       border: 13px solid #000000;
+      @include media("<=414px") {
+        display: none;
+      }
     }
   }
 }
@@ -111,6 +171,10 @@
   padding-top: 51px;
   padding-left: 70px;
   display: flex;
+  @include media("<=414px") {
+    padding-top: 20px;
+    padding-left: 30px;
+  }
 }
 
 .item-number {
@@ -118,6 +182,9 @@
   color: #000;
   font-size: 66px;
   font-weight: 900;
+  @include media("<=414px") {
+    font-size: 40px;
+  }
   &::after {
     content: "";
     display: inline-block;
@@ -127,6 +194,9 @@
     border-radius: 50%;
     margin-left: 8px;
     margin-bottom: 9px;
+    @include media("<=414px") {
+      display: none;
+    }
   }
 }
 
@@ -135,10 +205,22 @@
   font-weight: 700;
   line-height: 40px;
   padding-left: 24px;
+  @include media("<=414px") {
+    font-size: 18px;
+    line-height: 26px;
+    padding-left: 24px;
+  }
 }
 
 .item-text {
   font-size: 20px;
   font-weight: 400;
   padding: 48px 90px 38px 70px;
+  @include media("<=414px") {
+    font-size: 16px;
+    padding: 20px;
+    line-height: 18px;
+  }
 }
+
+/*ACCORDION*/
