@@ -46,7 +46,7 @@ function initAnchorScrolling() {
 
 // Accordion
 function initAccordion() {
-  $('.accordion-item-trigger').click(function () {
+  $('.item-title').click(function () {
     $(this).parent().toggleClass('is-active');
   });
 }
@@ -229,7 +229,7 @@ function handleComplete(evt, comp) {
 }
 
 $(document).ready(function () {
-  // initAccordion();
+  initAccordion();
   initHamburger();
   initAnchorScrolling();
   // initScrollProgressBar();

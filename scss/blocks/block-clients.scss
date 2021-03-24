@@ -4,6 +4,18 @@
   position: relative;
   padding: 15px 67px 0px;
   margin-bottom: 150px;
+  @include media("<=desktop") {
+    padding: 15px 57px 0px;
+  }
+  @include media("<=tablet") {
+    padding: 15px 30px 0;
+    margin-bottom: 50px;
+  }
+  @include media("<=414px") {
+    flex-direction: column;
+    padding: 15px 15px 0;
+    margin-bottom: 30px;
+  }
 }
 
 .clients-button {
@@ -22,6 +34,14 @@
     bottom: 60px;
     right: 0;
   }
+  @include media("<=tablet") {
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+  }
+  @include media("<=414px") {
+    display: none;
+  }
 }
 
 .button-triangle {
@@ -29,10 +49,15 @@
   border-left-width: 15px;
   border-right-width: 15px;
   border-top: 15px solid #fff;
+  @include media("<=tablet") {
+    border-left-width: 7px;
+    border-right-width: 7px;
+    border-top: 7px solid #fff;
+  }
 }
 
 .clients-item {
-  width: 100%;
+  width: 33%;
   max-width: 360px;
   min-height: 451px;
   border: 13px solid #000000;
@@ -45,6 +70,19 @@
   &__yellow {
     background-color: #ffc600;
   }
+  @include media("<=desktop") {
+    max-width: 300px;
+  }
+  @include media("<=tablet") {
+    min-height: auto;
+    max-width: 230px;
+    border: 8px solid #000000;
+  }
+  @include media("<=414px") {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 20px;
+  }
 }
 
 .clients-title {
@@ -55,6 +93,9 @@
   border-top: 85px solid #000;
   color: #fff;
   text-align: center;
+  @include media("<=tablet") {
+    border-top: 60px solid #000;
+  }
 }
 
 .clients-name {
@@ -66,6 +107,15 @@
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
+  @include media("<=tablet") {
+    font-size: 14px;
+    line-height: 20px;
+    top: -55px;
+    width: 90px;
+  }
+  @include media("<=414px") {
+    width: 150px;
+  }
 }
 
 .clients-position {
@@ -76,6 +126,15 @@
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
+  @include media("<=tablet") {
+    font-size: 12px;
+    line-height: 12px;
+    top: -30px;
+    width: 95px;
+  }
+  @include media("<=414px") {
+    width: 160px;
+  }
 }
 
 .clients-text {
@@ -87,5 +146,13 @@
   span {
     font-family: "Mont-Black";
     font-size: 29px;
+  }
+  @include media("<=tablet") {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 26px 26px 20px;
+  }
+  @include media("<=414px") {
+    line-height: 16px;
   }
 }

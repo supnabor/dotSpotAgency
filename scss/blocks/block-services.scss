@@ -5,6 +5,7 @@
   @include media("<=414px") {
     display: block;
     padding: 0 15px;
+    margin-bottom: 20px;
   }
 }
 
@@ -46,7 +47,7 @@
   }
   @include media("<=414px") {
     font-size: 38px;
-    padding: 40px 0 30px 30px;
+    padding: 40px 0 0 30px;
     margin-bottom: 30px;
   }
 }
@@ -59,6 +60,8 @@
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
+    border: 8px solid #000000;
+    border-bottom: none;
   }
   &__1 {
     background-color: #fff;
@@ -70,7 +73,7 @@
     position: relative;
     @include media("<=414px") {
       margin: 0 auto;
-      border: 13px solid #000000;
+      border: 8px solid #000000;
     }
     &::before {
       content: "";
@@ -100,7 +103,7 @@
     position: relative;
     @include media("<=414px") {
       margin: 0 auto;
-      border: 13px solid #000000;
+      border: 8px solid #000000;
     }
     &::before {
       content: "";
@@ -132,7 +135,9 @@
     border-left: none;
     @include media("<=414px") {
       margin: 0 auto;
-      border: 13px solid #000000;
+      border: 8px solid #000000;
+      height: auto;
+      max-width: 400px;
     }
 
     .item-number {
@@ -141,6 +146,10 @@
         background-color: #ffc600;
       }
     }
+    .item-arrow {
+      border-bottom: 7px solid #000;
+      border-right: 7px solid #000;
+    }
   }
   &__6 {
     max-width: 370px;
@@ -148,7 +157,8 @@
     border-left: none;
     border-top: none;
     @include media("<=414px") {
-      border: 13px solid #000000;
+      border: 8px solid #000000;
+      max-width: 400px;
     }
     &::before {
       content: "";
@@ -172,8 +182,10 @@
   padding-left: 70px;
   display: flex;
   @include media("<=414px") {
+    cursor: pointer;
     padding-top: 20px;
     padding-left: 30px;
+    padding-bottom: 20px;
   }
 }
 
@@ -218,8 +230,31 @@
   padding: 48px 90px 38px 70px;
   @include media("<=414px") {
     font-size: 16px;
-    padding: 20px;
+    padding: 0 20px;
     line-height: 18px;
+
+    transition: all 600ms ease-in-out;
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+.services-item.is-active .item-text {
+  max-height: 500px;
+  padding: 20px;
+}
+
+.item-arrow {
+  display: inline-block;
+  transform: rotate(45deg);
+  height: 20px;
+  width: 20px;
+  border-bottom: 7px solid #e911a0;
+  border-right: 7px solid #e911a0;
+  margin-left: 18px;
+  margin-top: 5px;
+  @include media(">414px") {
+    display: none;
   }
 }
 
