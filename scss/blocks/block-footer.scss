@@ -1,6 +1,9 @@
 .footer {
   background-color: #e911a0;
   padding: 50px;
+  @include media("<=tablet") {
+    padding: 30px;
+  }
 }
 
 .footer-text {

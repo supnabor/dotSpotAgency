@@ -8,6 +8,7 @@
   align-items: center;
   padding: 0 190px 80px;
   position: relative;
+  overflow: hidden;
   &::after {
     content: "";
     display: block;
@@ -20,17 +21,48 @@
     background-repeat: no-repeat;
     top: 40%;
     left: 27%;
+    @include media("<=tablet") {
+      background-size: contain;
+      max-width: 260px;
+      max-height: 110px;
+      top: 45%;
+    }
+  }
+  @include media("<=desktop") {
+    padding: 0 70px 50px;
+  }
+  @include media("<=414px") {
+    padding: 0 15px 40px;
   }
 }
 
 .contacts-box {
-  width: 100%;
+  width: 60%;
   max-width: 522px;
   background-color: #fff;
   border: 13px solid black;
   position: relative;
   padding: 50px 0 22px 100px;
   z-index: 10;
+  @include media("<=tablet") {
+    border: 10px solid black;
+    padding: 25px 0 12px 50px;
+  }
+  @include media("<=414px") {
+    border: 8px solid black;
+    width: 100%;
+  }
+}
+
+.contacts-image {
+  width: 30%;
+  @include media("<=414px") {
+    display: none;
+  }
+}
+
+.contacts-image img {
+  width: 100%;
 }
 
 .contacts-info {
@@ -43,6 +75,13 @@
     &:hover {
       color: #e911a0;
     }
+  }
+  @include media("<=tablet") {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  @include media("<=414px") {
+    font-size: 14px;
   }
 }
 
@@ -58,6 +97,12 @@
     background-image: url(/images/email.png);
     background-repeat: no-repeat;
     background-size: initial;
+    @include media("<=414px") {
+      max-width: 18px;
+      height: 18px;
+      background-size: contain;
+      top: 3px;
+    }
   }
 }
 
@@ -73,6 +118,12 @@
     background-image: url(/images/telephone.png);
     background-repeat: no-repeat;
     background-size: initial;
+    @include media("<=414px") {
+      max-width: 18px;
+      height: 18px;
+      background-size: contain;
+      top: 1px;
+    }
   }
 }
 
@@ -88,5 +139,11 @@
     background-image: url(/images/house-black-silhouette-without-door.png);
     background-repeat: no-repeat;
     background-size: initial;
+    @include media("<=414px") {
+      max-width: 18px;
+      height: 18px;
+      background-size: contain;
+      top: -2px;
+    }
   }
 }

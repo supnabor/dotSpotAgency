@@ -1,16 +1,79 @@
 .partners {
   background-color: #00ccff;
+  .section-title {
+    @include media("<=375px") {
+      font-size: 32px;
+    }
+  }
 }
 
 .partners-inner {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 48px 150px;
+  @include media("<=tablet") {
+    padding: 0 30px 60px;
+  }
+  @include media("<=414px") {
+    flex-wrap: wrap;
+    padding: 0 15px 30px;
+  }
 }
 
-.partners-item img {
-  filter: grayscale(100%);
-  &:hover {
-    filter: grayscale(0);
+.partners-item {
+  flex: 1 1 20%;
+  @include media("<=desktop") {
+    padding: 0 5px;
+  }
+  @include media("<=414px") {
+    flex: 1 1 50%;
+    max-width: 150px;
+    margin: 0 auto 20px;
+    padding: 0 10px;
+    &:active {
+      .partners-img-2 {
+        opacity: 0;
+        visibility: hidden;
+        display: none;
+      }
+
+      .partners-img-1 {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.partners-img-2 {
+  opacity: 1;
+  visibility: visible;
+  @include media("<=tablet") {
+    width: 100%;
+  }
+}
+
+.partners-img-1 {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  @include media("<=tablet") {
+    width: 100%;
+  }
+}
+
+.partners-item:hover {
+  .partners-img-2 {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+  }
+
+  .partners-img-1 {
+    display: block;
+    opacity: 1;
+    visibility: visible;
   }
 }
