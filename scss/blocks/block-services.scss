@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  @include media("<=desktop") {
+    padding: 0 15px;
+  }
   @include media("<=414px") {
     display: block;
     padding: 0 15px;
@@ -54,8 +57,13 @@
 
 .services-item {
   border: 13px solid #000000;
+  margin: -6.5px;
   width: 30%;
   flex: 1 1 auto;
+  @include media("<=tablet") {
+    border: 10px solid #000000;
+    margin: -5px;
+  }
   @include media("<=414px") {
     width: 100%;
     max-width: 350px;
@@ -68,12 +76,17 @@
     max-width: 383px;
     margin-left: 62px;
     margin-top: 119px;
-    border-right: none;
-    border-bottom: none;
+    //border-right: none;
+    //border-bottom: none;
     position: relative;
+    @include media("<=desktop") {
+      max-width: 313px;
+    }
     @include media("<=414px") {
       margin: 0 auto;
       border: 8px solid #000000;
+      border-bottom: none;
+      max-width: 400px;
     }
     &::before {
       content: "";
@@ -85,6 +98,10 @@
       left: -63px;
       bottom: -12px;
       border: 13px solid #000000;
+      @include media("<=tablet") {
+        border: 10px solid #000000;
+        bottom: -10px;
+      }
       @include media("<=414px") {
         display: none;
       }
@@ -93,17 +110,27 @@
   &__2 {
     background-color: #ffc600;
     max-width: 383px;
+    @include media("<=desktop") {
+      max-width: 310px;
+    }
+    @include media("<=414px") {
+      max-width: 400px;
+    }
   }
   &__3 {
     background-color: #3c00ff;
     color: #fff;
     max-width: 440px;
     margin-top: 70px;
-    border-left: none;
+    //border-left: none;
     position: relative;
+    @include media("<=desktop") {
+      max-width: 400px;
+    }
     @include media("<=414px") {
       margin: 0 auto;
       border: 8px solid #000000;
+      border-bottom: none;
     }
     &::before {
       content: "";
@@ -115,6 +142,10 @@
       left: -12px;
       top: -70px;
       border: 13px solid #000000;
+      @include media("<=tablet") {
+        border: 10px solid #000000;
+        left: -10px;
+      }
       @include media("<=414px") {
         display: none;
       }
@@ -125,19 +156,32 @@
   }
   &__4 {
     background-color: #00ccff;
-    max-width: 458px;
+    max-width: 451px;
+    @include media("<=desktop") {
+      max-width: 481px;
+    }
   }
   &__5 {
     background-color: #e911a0;
-    max-width: 370px;
+    max-width: 383px;
     height: 402px;
     margin-top: -110px;
-    border-left: none;
+    //border-left: none;
+    @include media("<=desktop") {
+      max-width: 310px;
+      height: 380px;
+      margin-top: -125px;
+    }
+    @include media("<=tablet") {
+      max-width: 232px;
+      height: 311px;
+    }
     @include media("<=414px") {
       margin: 0 auto;
       border: 8px solid #000000;
       height: auto;
       max-width: 400px;
+      border-bottom: none;
     }
 
     .item-number {
@@ -154,8 +198,15 @@
   &__6 {
     max-width: 370px;
     position: relative;
-    border-left: none;
-    border-top: none;
+    //border-left: none;
+    //border-top: none;
+    @include media("<=desktop") {
+      max-width: 315px;
+      margin-right: 20px;
+    }
+    @include media("<=tablet") {
+      max-width: 209px;
+    }
     @include media("<=414px") {
       border: 8px solid #000000;
       max-width: 400px;
@@ -170,6 +221,10 @@
       left: -192px;
       bottom: -13px;
       border: 13px solid #000000;
+      @include media("<=tablet") {
+        border: 10px solid #000000;
+        bottom: -10px;
+      }
       @include media("<=414px") {
         display: none;
       }
@@ -181,6 +236,15 @@
   padding-top: 51px;
   padding-left: 70px;
   display: flex;
+  @include media("<=desktop") {
+    padding-left: 40px;
+    padding-top: 30px;
+  }
+  @include media("<=tablet") {
+    padding-left: 25px;
+    padding-top: 20px;
+  }
+
   @include media("<=414px") {
     cursor: pointer;
     padding-top: 20px;
@@ -197,6 +261,9 @@
   @include media("<=414px") {
     font-size: 40px;
   }
+  @include media("<=tablet") {
+    font-size: 36px;
+  }
   &::after {
     content: "";
     display: inline-block;
@@ -206,6 +273,11 @@
     border-radius: 50%;
     margin-left: 8px;
     margin-bottom: 9px;
+    @include media("<=tablet") {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 4px;
+    }
     @include media("<=414px") {
       display: none;
     }
@@ -217,6 +289,11 @@
   font-weight: 700;
   line-height: 40px;
   padding-left: 24px;
+  @include media("<=tablet") {
+    font-size: 20px;
+    line-height: 20px;
+    padding-left: 12px;
+  }
   @include media("<=414px") {
     font-size: 18px;
     line-height: 26px;
@@ -228,6 +305,13 @@
   font-size: 20px;
   font-weight: 400;
   padding: 48px 90px 38px 70px;
+  @include media("<=desktop") {
+    padding: 30px 40px 34px 40px;
+  }
+  @include media("<=tablet") {
+    font-size: 16px;
+    padding: 30px;
+  }
   @include media("<=414px") {
     font-size: 16px;
     padding: 0 20px;
@@ -253,8 +337,13 @@
   border-right: 7px solid #e911a0;
   margin-left: 18px;
   margin-top: 5px;
+  transition: transform 0.3s ease-in-out;
   @include media(">414px") {
     display: none;
+  }
+  .is-active & {
+    transform: rotate(225deg);
+    margin-top: 8px;
   }
 }
 
